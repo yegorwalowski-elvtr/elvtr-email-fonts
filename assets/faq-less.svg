@@ -1,0 +1,7 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 52 39.0464" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Sullabus buttons">
+<rect width="52" height="39.0464" rx="16" fill="var(--fill-0, #018362)"/>
+<rect x="1" y="1" width="50" height="37.0464" rx="15" stroke="var(--stroke-0, white)" stroke-opacity="0.4" stroke-width="2"/>
+<path id="Vector" d="M32 17.0482C32 16.7818 31.9018 16.5153 31.6915 16.305C31.2848 15.8983 30.6117 15.8983 30.2051 16.305L25.9982 20.5118L21.7914 16.305C21.3847 15.8983 20.7117 15.8983 20.305 16.305C19.8983 16.7117 19.8983 17.3848 20.305 17.7914L25.255 22.7415C25.6617 23.1481 26.3348 23.1481 26.7415 22.7415L31.6915 17.7914C31.9018 17.5811 32 17.3146 32 17.0482Z" fill="var(--fill-0, white)"/>
+</g>
+</svg>

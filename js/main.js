@@ -2,41 +2,55 @@
 
 var SYLLABUS = [
   { title: 'How Top Professionals Actually Build Their Careers', date: 'Wed (6/10)', time: '6 PM PT', format: 'Panel',
-    desc: "What separates deliberate career-building from just staying busy — from people who've done both." },
-  { title: 'Breaking Into Any Industry Without Experience', date: 'Wed (6/17)', time: '6 PM PT', format: 'Panel',
-    desc: "How to enter a new field when your résumé doesn't check the usual boxes." },
+    speakers: [
+      { name: 'Darin Danforth', url: 'https://www.linkedin.com/in/ddan4th/' },
+      { name: 'Lisa Savage', url: 'https://www.linkedin.com/in/lisa-savage-8010325/' },
+      { name: 'Duc Haba', url: 'https://www.linkedin.com/in/duchaba/' }
+    ] },
+  { title: 'How to Turn Skills Into Opportunities', date: 'Wed (6/17)', time: '6 PM PT', format: 'Panel',
+    speakers: [
+      { name: 'Clayton Davis', url: 'https://www.linkedin.com/in/clayton-davis-0b664a7/' },
+      { name: 'David N. Weiss', url: 'https://www.linkedin.com/in/david-n-weiss-72731838/' },
+      { name: 'Matt Balogh', url: 'https://www.linkedin.com/in/gmbaloghgames' }
+    ] },
   { title: 'What Hiring Managers Really Look For (And What They Ignore)', date: 'Wed (6/24)', time: '6 PM PT', format: 'Panel',
-    desc: 'The signals that actually move a hiring decision — straight from the people making it.' },
-  { title: 'Interview Mastery: Psychology of Winning Interviews', date: 'Wed (7/1)', time: '6 PM PT', format: 'Panel',
-    desc: 'The psychology behind interviews that land offers, not just get you through the door.' },
-  { title: 'AI Without the Hype: What Actually Matters for Your Career', date: 'Wed (7/8)', time: '5 PM PT', format: 'Panel',
-    desc: "Cutting through the noise on AI to focus on what's actually changing your day-to-day work." },
-  { title: 'How to Stand Out in a Competitive Field', date: 'Tue (7/14)', time: '6 PM PT', format: 'Panel',
-    desc: 'Practical ways to differentiate yourself when every résumé looks the same.' },
-  { title: 'Public Speaking for Real Life (Not Just the Stage)', date: 'Wed (7/22)', time: '6 PM PT', format: 'Solo',
-    desc: 'Speaking with confidence in meetings and pitches — not just on stage.' },
-  { title: 'Building a Personal Brand That Gets You Opportunities', date: 'Wed (7/29)', time: '6 PM PT', format: 'Solo',
-    desc: 'How to build a reputation that brings opportunities to you, instead of chasing them.' },
-  { title: 'How to Turn Skills Into Opportunities', date: 'Wed (8/5)', time: '6 PM PT', format: 'Panel',
-    desc: 'Translating what you already know into your next role, project, or opportunity.' },
-  { title: 'What It Takes to Grow From Specialist to Leader', date: 'Wed (8/12)', time: '6 PM PT', format: 'Solo',
-    desc: 'The mindset and skill shifts required to move from doing the work to leading it.' },
-  { title: 'How to Learn Faster and Smarter', date: 'Wed (8/19)', time: '6 PM PT', format: 'Solo',
-    desc: 'Learning techniques that help you retain more in less time.' },
-  { title: 'Getting Promoted: What Nobody Tells You', date: 'Wed (8/26)', time: '6 PM PT', format: 'Panel',
-    desc: "The unspoken factors behind promotions, from people who've been on both sides of the decision." },
-  { title: 'Designing Your Next 6 Months (Action Plan Session)', date: 'Wed (9/2)', time: '6 PM PT', format: 'Solo',
-    desc: 'A hands-on session to leave with a concrete plan for your next six months.' }
+    speakers: [
+      { name: 'Danielle Tomassini', url: 'https://www.linkedin.com/in/dtomassini/' },
+      { name: 'David Auerbach', url: 'https://www.linkedin.com/in/davidjauerbach4/' },
+      { name: 'Leah Latham', url: 'https://www.linkedin.com/in/leahlatham/' }
+    ] },
+  { title: 'How to Stand Out in a Competitive Field', date: 'Wed (7/1)', time: '6 PM PT', format: 'Panel',
+    speakers: [
+      { name: 'Ivy Sang', url: 'https://ca.linkedin.com/in/ivysang' },
+      { name: 'Adam Beechen', url: 'https://www.linkedin.com/in/adam-beechen-b6320411/' },
+      { name: 'Vanessa Robles', url: 'https://www.linkedin.com/in/vanessa-robles-a505b39/' }
+    ] },
+  { title: 'Building a Personal Brand That Attracts Opportunities', date: 'Wed (7/8)', time: '5 PM PT', format: 'Solo',
+    speakers: [
+      { name: 'Lilah Jones', url: 'https://www.linkedin.com/in/lilahjones' }
+    ] },
+  { title: 'Interview Mastery: Psychology of Winning Interviews', date: 'Tue (7/14)', time: '6 PM PT', format: 'Solo',
+    speakers: [
+      { name: 'Lindsay Shaw', url: 'https://www.linkedin.com/in/lindsay-shaw-4886b76/' }
+    ] },
+  { title: 'AI Without the Hype: What Actually Matters for Your Career', date: 'Wed (7/22)', time: '6 PM PT', format: 'Panel',
+    speakers: [
+      { name: 'Jeremy Rule', url: 'https://www.linkedin.com/in/jeremyrule/' },
+      { name: 'Tanner Gilligan', url: 'https://www.linkedin.com/in/tanner-gilligan/' },
+      { name: 'Avril Hsu', url: 'https://www.linkedin.com/in/avrilwhsu' }
+    ] },
+  { title: 'Public Speaking for Real Life (Not Just the Stage)', date: 'Wed (7/29)', time: '6 PM PT', format: 'Solo',
+    speakers: [
+      { name: 'Monique Hayward', url: 'https://www.linkedin.com/in/moniquehayward' }
+    ] }
 ];
 
-var VISIBLE_LESSONS = 5;
-
 var REVIEWS = [
+  { text: "Wonderful insights and information, this gave me lots to think on! It was also very well-run and effective, easily the most time-effective webinar I've ever attended. Thank you everyone!", rating: 5 },
   { text: 'Pretty thoroughly highlighted the commonalities between these different creative industries and the quality of effort that marks success in them.', rating: 4.5 },
   { text: 'It was interesting to align passion, work ethic and essential rest in the journey of discipline to gain desired outcomes. Found that to be a commonality for each facilitator sharing their success story.', rating: 4.8 },
   { text: "Really interesting to hear these professionals' perspectives. They had good insights into how to package and present oneself. I appreciated the panel answering my question about neurodivergent job seekers.", rating: 5 },
   { text: 'It was very insightful and helpful towards answering questions I have regarding career change and how I can present myself to hiring managers.', rating: 5 },
-  { text: "Wonderful insights and information, this gave me lots to think on! It was also very well-run and effective, easily the most time-effective webinar I've ever attended. Thank you everyone!", rating: 5 },
   { text: "Lilah nailed it by clearing the assumptions on HOLD BARS. Her advice on reaching out to colleagues and people working in organizations you're seeking rather than relying only on LinkedIn — I believe her, sometimes it's faster getting work from these contacts.", rating: 4.8 }
 ];
 
@@ -44,12 +58,22 @@ var REVIEWS = [
 
 var syllabusList = document.getElementById('syllabus-list');
 
+function speakerHTML(speaker) {
+  return (
+    '<li>' +
+      '<a class="lesson__speaker" href="' + speaker.url + '" target="_blank" rel="noopener">' +
+        '<span class="lesson__speaker-name">' + speaker.name + '</span>' +
+        '<img src="assets/icon-linkedin.svg" alt="LinkedIn" width="16" height="16" />' +
+      '</a>' +
+    '</li>'
+  );
+}
+
 function lessonHTML(item, index) {
   var num = String(index + 1).padStart(2, '0');
   var open = index === 0;
-  var hidden = index >= VISIBLE_LESSONS;
   return (
-    '<article class="lesson' + (open ? ' lesson--open' : '') + (hidden ? ' lesson--hidden' : '') + '">' +
+    '<article class="lesson' + (open ? ' lesson--open' : '') + '">' +
       '<p class="lesson__number">' + num + '</p>' +
       '<div class="lesson__info">' +
         '<h3 class="lesson__title">' + item.title + '</h3>' +
@@ -59,7 +83,10 @@ function lessonHTML(item, index) {
           '<span class="lesson__badge">' + item.format + '</span>' +
         '</div>' +
         '<div class="lesson__details">' +
-          '<div class="lesson__details-inner"><p class="lesson__desc">' + item.desc + '</p></div>' +
+          '<div class="lesson__details-inner">' +
+            '<p class="lesson__speakers-label">Speakers:</p>' +
+            '<ul class="lesson__speakers">' + item.speakers.map(speakerHTML).join('') + '</ul>' +
+          '</div>' +
         '</div>' +
       '</div>' +
       '<div class="lesson__action">' +
@@ -88,22 +115,6 @@ syllabusList.addEventListener('click', function (event) {
     setLessonOpen(open, false);
   });
   if (willOpen) setLessonOpen(lesson, true);
-});
-
-var showAllBtn = document.getElementById('syllabus-show-all');
-var syllabusExpanded = false;
-
-showAllBtn.addEventListener('click', function () {
-  syllabusExpanded = !syllabusExpanded;
-  syllabusList.classList.toggle('syllabus__list--expanded', syllabusExpanded);
-  showAllBtn.textContent = syllabusExpanded ? 'Hide full Syllabus' : 'Show all Syllabus';
-  if (!syllabusExpanded) {
-    // collapse any lesson that is about to be hidden again
-    syllabusList.querySelectorAll('.lesson--hidden.lesson--open').forEach(function (lesson) {
-      setLessonOpen(lesson, false);
-    });
-    document.getElementById('syllabus').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
 });
 
 /* ============ Reviews slider ============ */
@@ -159,6 +170,23 @@ nextBtns.forEach(function (btn) {
 });
 
 renderReviews();
+
+// Swipe navigation (touch devices)
+var touchStartX = null;
+var reviewsViewport = document.querySelector('.reviews__viewport');
+
+reviewsViewport.addEventListener('touchstart', function (event) {
+  touchStartX = event.touches[0].clientX;
+}, { passive: true });
+
+reviewsViewport.addEventListener('touchend', function (event) {
+  if (touchStartX === null) return;
+  var delta = event.changedTouches[0].clientX - touchStartX;
+  touchStartX = null;
+  if (Math.abs(delta) < 40) return;
+  if (delta < 0 && reviewIndex < REVIEWS.length - 1) { reviewIndex++; renderReviews(); }
+  if (delta > 0 && reviewIndex > 0) { reviewIndex--; renderReviews(); }
+}, { passive: true });
 
 /* ============ FAQ accordion ============ */
 

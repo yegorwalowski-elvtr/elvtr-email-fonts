@@ -68,7 +68,10 @@
   --font-body: 'Neue Montreal', 'Helvetica Neue', Arial, sans-serif;
 
   --page-max: 1366px;
+  --content-max: 1286px; /* page-max minus side paddings */
   --pad-x: 40px;
+  /* keeps content at page-max while section backgrounds span the full viewport */
+  --pad-side: max(var(--pad-x), calc((100% - var(--content-max)) / 2));
   --anim: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -119,10 +122,8 @@ button {
   padding: 0;
 }
 
-main, .header, .footer {
-  max-width: var(--page-max);
-  margin: 0 auto;
-}
+/* Section backgrounds span the full viewport; inner content is capped
+   via --pad-side on each block's inline padding. */
 
 /* ============ Scroll reveal & motion ============ */
 .reveal {
@@ -205,11 +206,20 @@ main, .header, .footer {
 
 /* ============ Header ============ */
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 58px;
-  padding: 12px var(--pad-x);
+  padding: 12px var(--pad-side);
+  background: var(--color-bg);
+  transition: box-shadow var(--anim);
+}
+
+.header--scrolled {
+  box-shadow: 0 4px 16px rgba(14, 18, 27, 0.08);
 }
 
 .header__logo img {
@@ -257,7 +267,13 @@ main, .header, .footer {
   font-size: 14px;
 }
 
-/* ============ Side menu (mobile) ============ */
+/* ============ Side menu (mobile only) ============ */
+@media (min-width: 901px) {
+  .side-menu {
+    display: none;
+  }
+}
+
 .side-menu {
   position: fixed;
   inset: 0;
@@ -389,7 +405,7 @@ main, .header, .footer {
   display: flex;
   flex-direction: column;
   gap: 48px;
-  padding: 60px var(--pad-x);
+  padding: 60px var(--pad-side);
 }
 
 .section--white {
@@ -427,7 +443,7 @@ main, .header, .footer {
   align-items: stretch;
   justify-content: space-between;
   gap: 40px;
-  padding: 40px var(--pad-x);
+  padding: 40px var(--pad-side);
 }
 
 .hero__content {
@@ -749,6 +765,11 @@ main, .header, .footer {
   right: -10px;
   bottom: -60px;
   width: 285px;
+  transform: scaleX(-1);
+}
+
+.pillar-card:hover .pillar-card__image--phone img {
+  transform: scaleX(-1) translateY(-6px);
 }
 
 .pillar-card__image--rocket img {
@@ -984,23 +1005,33 @@ main, .header, .footer {
   color: #b3b3b3;
 }
 
-.reviews__card {
+.reviews__slider {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 16px;
+}
+
+.reviews__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 256px;
   padding: 32px;
   border-radius: 16px;
   background: #f5f5f5;
-  min-width: 0;
 }
 
 .reviews__viewport {
   overflow: hidden;
+  flex: 1;
+  display: flex;
 }
 
 .reviews__track {
   display: flex;
+  width: 100%;
   transition: transform var(--anim);
 }
 
@@ -1009,6 +1040,7 @@ main, .header, .footer {
   min-width: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 28px;
 }
 
@@ -1022,7 +1054,8 @@ main, .header, .footer {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: auto;
+  /* keeps clear of the absolutely-positioned arrows */
+  padding-right: 96px;
 }
 
 .review__stars {
@@ -1075,7 +1108,9 @@ main, .header, .footer {
 }
 
 .reviews__controls--desktop {
-  justify-content: flex-end;
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
 }
 
 .reviews__controls--mobile {
@@ -1244,7 +1279,7 @@ main, .header, .footer {
   flex-direction: column;
   align-items: flex-end;
   gap: 20px;
-  padding: 30px var(--pad-x);
+  padding: 30px var(--pad-side);
   background: var(--color-white);
 }
 
@@ -1734,12 +1769,20 @@ main, .header, .footer {
   }
 
   .reviews__card {
+    min-height: 0;
     padding: 20px;
+  }
+
+  .review {
     gap: 20px;
   }
 
   .review__text {
     font-size: 18px;
+  }
+
+  .review__rating {
+    padding-right: 0;
   }
 
   .reviews__controls--desktop {

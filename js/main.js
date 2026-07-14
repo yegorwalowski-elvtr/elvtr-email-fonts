@@ -177,6 +177,13 @@ document.querySelectorAll('.faq-item__toggle').forEach(function (toggle) {
   });
 });
 
+/* ============ Sticky header shadow ============ */
+
+var header = document.querySelector('.header');
+window.addEventListener('scroll', function () {
+  header.classList.toggle('header--scrolled', window.scrollY > 8);
+}, { passive: true });
+
 /* ============ Scroll to top ============ */
 
 document.getElementById('scroll-up').addEventListener('click', function () {

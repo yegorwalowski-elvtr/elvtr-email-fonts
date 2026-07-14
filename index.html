@@ -17,12 +17,12 @@
       <img src="assets/logo.svg" alt="ELVTR" width="37" height="32" />
     </a>
     <nav class="header__nav" aria-label="Main navigation">
-      <a href="#" class="nav-link nav-link--active">Home</a>
-      <a href="#" class="nav-link">Courses</a>
-      <a href="#" class="nav-link">About Us</a>
-      <a href="#" class="nav-link">Blog</a>
-      <a href="#" class="nav-link">Reviews</a>
-      <a href="#" class="nav-link">Careers</a>
+      <a href="https://elvtr.com/" class="nav-link nav-link--active">Home</a>
+      <a href="https://elvtr.com/course" class="nav-link">Courses</a>
+      <a href="https://elvtr.com/aboutelvtr" class="nav-link">About Us</a>
+      <a href="https://elvtr.com/blog" class="nav-link">Blog</a>
+      <a href="https://elvtr.com/reviews" class="nav-link">Reviews</a>
+      <a href="https://elvtr.com/careers" class="nav-link">Careers</a>
     </nav>
     <button class="header__menu-btn" id="menu-btn" aria-expanded="false" aria-controls="side-menu">Menu</button>
   </header>
@@ -48,16 +48,16 @@
       <div class="side-menu__footer">
         <hr class="side-menu__divider" />
         <nav class="side-menu__links" aria-label="Site links">
-          <a href="#">Home</a>
-          <a href="#">Courses</a>
-          <a href="#">Blog</a>
-          <a href="#">Reviews</a>
-          <a href="#">Careers</a>
+          <a href="https://elvtr.com/">Home</a>
+          <a href="https://elvtr.com/course">Courses</a>
+          <a href="https://elvtr.com/blog">Blog</a>
+          <a href="https://elvtr.com/reviews">Reviews</a>
+          <a href="https://elvtr.com/careers">Careers</a>
         </nav>
         <div class="side-menu__socials">
-          <a href="#" class="social social--mail" aria-label="Email"><img src="assets/social-mail.svg" alt="" width="20" height="20" /></a>
-          <a href="#" class="social social--instagram" aria-label="Instagram"><img src="assets/social-instagram.svg" alt="" width="20" height="20" /></a>
-          <a href="#" class="social social--facebook" aria-label="Facebook"><img src="assets/social-facebook.svg" alt="" width="20" height="20" /></a>
+          <a href="mailto:info@elvtr.com" class="social social--mail" aria-label="Email"><img src="assets/social-mail.svg" alt="" width="20" height="20" /></a>
+          <a href="https://www.instagram.com/elvtrcom/" class="social social--instagram" aria-label="Instagram"><img src="assets/social-instagram.svg" alt="" width="20" height="20" /></a>
+          <a href="https://www.facebook.com/elvtrcourses/" class="social social--facebook" aria-label="Facebook"><img src="assets/social-facebook.svg" alt="" width="20" height="20" /></a>
         </div>
       </div>
     </aside>
@@ -78,7 +78,7 @@
           <p class="hero__subtitle">12 weeks of live sessions with industry experts — already included in your ELVTR enrollment. No extra cost, no extra sign-up.</p>
         </div>
         <div class="hero__buttons">
-          <a href="#intro" class="btn btn--primary btn--big">See What's Included</a>
+          <a href="#syllabus" class="btn btn--primary btn--big">See What's Included</a>
         </div>
       </div>
       <div class="hero__image">
@@ -134,11 +134,11 @@
           <p class="benefit-card__label">12 weeks of live sessions</p>
         </div>
         <div class="benefit-card benefit-card--lavender">
-          <img class="benefit-card__icon" src="assets/icon-3d-badge.png" alt="" />
+          <img class="benefit-card__icon benefit-card__icon--flip" src="assets/icon-3d-badge.png" alt="" />
           <p class="benefit-card__label">Experts and topics from ELVTR courses</p>
         </div>
         <div class="benefit-card benefit-card--cream">
-          <img class="benefit-card__icon" src="assets/icon-3d-mic.png" alt="" />
+          <img class="benefit-card__icon benefit-card__icon--flip" src="assets/icon-3d-mic.png" alt="" />
           <p class="benefit-card__label">Solo talks and expert panels</p>
         </div>
         <div class="benefit-card benefit-card--teal">
@@ -217,19 +217,21 @@
           <p class="section__subtitle">Real feedback from students who've already joined this summer's sessions.</p>
           <p class="reviews__counter reviews__counter--desktop"><span id="reviews-counter-current">01</span><span class="reviews__counter-total">/<span id="reviews-counter-total">06</span></span></p>
         </div>
-        <div class="reviews__card">
-          <div class="reviews__viewport">
-            <div class="reviews__track" id="reviews-track"><!-- rendered by js/main.js --></div>
+        <div class="reviews__slider">
+          <div class="reviews__card">
+            <div class="reviews__viewport">
+              <div class="reviews__track" id="reviews-track"><!-- rendered by js/main.js --></div>
+            </div>
+            <div class="reviews__controls reviews__controls--desktop">
+              <button class="reviews__arrow reviews__arrow--prev" id="reviews-prev-d" aria-label="Previous review"></button>
+              <button class="reviews__arrow reviews__arrow--next" id="reviews-next-d" aria-label="Next review"></button>
+            </div>
           </div>
-          <div class="reviews__controls reviews__controls--desktop">
-            <button class="reviews__arrow reviews__arrow--prev" id="reviews-prev-d" aria-label="Previous review"></button>
-            <button class="reviews__arrow reviews__arrow--next" id="reviews-next-d" aria-label="Next review"></button>
+          <div class="reviews__controls reviews__controls--mobile">
+            <button class="reviews__arrow reviews__arrow--prev" id="reviews-prev-m" aria-label="Previous review"></button>
+            <p class="reviews__counter"><span data-counter-current>01</span><span class="reviews__counter-total">/<span data-counter-total>06</span></span></p>
+            <button class="reviews__arrow reviews__arrow--next" id="reviews-next-m" aria-label="Next review"></button>
           </div>
-        </div>
-        <div class="reviews__controls reviews__controls--mobile">
-          <button class="reviews__arrow reviews__arrow--prev" id="reviews-prev-m" aria-label="Previous review"></button>
-          <p class="reviews__counter"><span data-counter-current>01</span><span class="reviews__counter-total">/<span data-counter-total>06</span></span></p>
-          <button class="reviews__arrow reviews__arrow--next" id="reviews-next-m" aria-label="Next review"></button>
         </div>
       </div>
     </section>
@@ -317,24 +319,24 @@
           <p class="footer__links-title">Company</p>
           <div class="footer__link-groups">
             <div class="footer__link-list">
-              <a href="#">Home</a>
-              <a href="#">Courses</a>
+              <a href="https://elvtr.com/">Home</a>
+              <a href="https://elvtr.com/course">Courses</a>
             </div>
             <div class="footer__link-list">
-              <a href="#">Blog</a>
-              <a href="#">Reviews</a>
+              <a href="https://elvtr.com/blog">Blog</a>
+              <a href="https://elvtr.com/reviews">Reviews</a>
             </div>
             <div class="footer__link-list">
-              <a href="#">About us</a>
-              <a href="#">Careers</a>
+              <a href="https://elvtr.com/aboutelvtr">About us</a>
+              <a href="https://elvtr.com/careers">Careers</a>
             </div>
           </div>
         </div>
         <div class="footer__contacts">
           <div class="footer__socials">
-            <a href="#" class="social social--mail" aria-label="Email"><img src="assets/social-mail.svg" alt="" width="20" height="20" /></a>
-            <a href="#" class="social social--instagram" aria-label="Instagram"><img src="assets/social-instagram.svg" alt="" width="20" height="20" /></a>
-            <a href="#" class="social social--facebook" aria-label="Facebook"><img src="assets/social-facebook.svg" alt="" width="20" height="20" /></a>
+            <a href="mailto:info@elvtr.com" class="social social--mail" aria-label="Email"><img src="assets/social-mail.svg" alt="" width="20" height="20" /></a>
+            <a href="https://www.instagram.com/elvtrcom/" class="social social--instagram" aria-label="Instagram"><img src="assets/social-instagram.svg" alt="" width="20" height="20" /></a>
+            <a href="https://www.facebook.com/elvtrcourses/" class="social social--facebook" aria-label="Facebook"><img src="assets/social-facebook.svg" alt="" width="20" height="20" /></a>
           </div>
           <div class="footer__contact-details">
             <a class="footer__phone" href="tel:+18888966950">+1 888 896 6950</a>
@@ -349,12 +351,12 @@
           <p>© 2019-2026 ELVTR US LLC. <br />ALL RIGHTS RESERVED</p>
         </div>
         <div class="footer__policies">
-          <a href="#">Accessibility</a>
-          <a href="#">Equality, Diversity and Inclusion Policy</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Cookie Policy</a>
-          <a href="#">Privacy Choices</a>
+          <a href="https://elvtr.com/web-accessibility-statement">Accessibility</a>
+          <a href="https://elvtr.com/equality">Equality, Diversity and Inclusion Policy</a>
+          <a href="https://elvtr.com/privacy">Privacy Policy</a>
+          <a href="https://elvtr.com/terms">Terms of Use</a>
+          <a href="https://elvtr.com/cookies">Cookie Policy</a>
+          <a href="https://elvtr.com/#ckyCCPAOptOut">Privacy Choices</a>
         </div>
       </div>
     </div>

@@ -773,10 +773,12 @@ button {
   transform: translateY(-6px);
 }
 
+/* Matches the Figma crop: 283px square, 37px gap from the right edge,
+   cord cropped 74px below the card bottom */
 .pillar-card__image--phone img {
-  right: -10px;
-  bottom: -60px;
-  width: 285px;
+  right: 37px;
+  bottom: -74px;
+  width: 283px;
   transform: scaleX(-1);
 }
 
@@ -1037,8 +1039,14 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 495px;
-  flex-shrink: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+@media (min-width: 1200px) {
+  .reviews__heading .section__title {
+    white-space: nowrap;
+  }
 }
 
 .reviews__counter {
@@ -1702,9 +1710,9 @@ button {
   }
 
   .pillar-card__image--phone img {
-    width: 190px;
-    right: -30px;
-    bottom: -70px;
+    width: 225px;
+    right: 20px;
+    bottom: -58px;
   }
 
   .pillar-card__image--rocket img {
@@ -1807,6 +1815,13 @@ button {
   }
 
   .reviews__heading {
+    width: 100%;
+    flex: none;
+  }
+
+  .reviews__slider {
+    /* the desktop 645px flex-basis would become height in the column layout */
+    flex: none;
     width: 100%;
   }
 

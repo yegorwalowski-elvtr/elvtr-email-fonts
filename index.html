@@ -16,17 +16,52 @@
     <a href="#" class="header__logo" aria-label="ELVTR home">
       <img src="assets/logo.svg" alt="ELVTR" width="37" height="32" />
     </a>
-    <nav class="header__nav" id="main-nav" aria-label="Main navigation">
+    <nav class="header__nav" aria-label="Main navigation">
       <a href="#" class="nav-link nav-link--active">Home</a>
       <a href="#" class="nav-link">Courses</a>
       <a href="#" class="nav-link">About Us</a>
       <a href="#" class="nav-link">Blog</a>
       <a href="#" class="nav-link">Reviews</a>
       <a href="#" class="nav-link">Careers</a>
-      <a href="#" class="btn btn--primary btn--nav">Apply now</a>
     </nav>
-    <button class="header__menu-btn" id="menu-btn" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <button class="header__menu-btn" id="menu-btn" aria-expanded="false" aria-controls="side-menu">Menu</button>
   </header>
+
+  <!-- Mobile side menu -->
+  <div class="side-menu" id="side-menu" aria-hidden="true">
+    <div class="side-menu__overlay" id="side-menu-overlay"></div>
+    <aside class="side-menu__panel" aria-label="Site menu">
+      <button class="side-menu__close" id="side-menu-close" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M3 3L17 17M17 3L3 17" stroke="#21180d" stroke-width="2.4" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="side-menu__body">
+        <p class="side-menu__title">ELVTR Talks: Summer Series</p>
+        <nav class="side-menu__anchors" aria-label="Page sections">
+          <a href="#intro" class="side-menu__anchor" data-section="intro">About</a>
+          <a href="#syllabus" class="side-menu__anchor" data-section="syllabus">Syllabus</a>
+          <a href="#reviews" class="side-menu__anchor" data-section="reviews">Feedback</a>
+          <a href="#faq" class="side-menu__anchor" data-section="faq">FAQ</a>
+        </nav>
+      </div>
+      <div class="side-menu__footer">
+        <hr class="side-menu__divider" />
+        <nav class="side-menu__links" aria-label="Site links">
+          <a href="#">Home</a>
+          <a href="#">Courses</a>
+          <a href="#">Blog</a>
+          <a href="#">Reviews</a>
+          <a href="#">Careers</a>
+        </nav>
+        <div class="side-menu__socials">
+          <a href="#" class="social social--mail" aria-label="Email"><img src="assets/social-mail.svg" alt="" width="20" height="20" /></a>
+          <a href="#" class="social social--instagram" aria-label="Instagram"><img src="assets/social-instagram.svg" alt="" width="20" height="20" /></a>
+          <a href="#" class="social social--facebook" aria-label="Facebook"><img src="assets/social-facebook.svg" alt="" width="20" height="20" /></a>
+        </div>
+      </div>
+    </aside>
+  </div>
 
   <main>
     <!-- Hero -->
@@ -43,8 +78,7 @@
           <p class="hero__subtitle">12 weeks of live sessions with industry experts — already included in your ELVTR enrollment. No extra cost, no extra sign-up.</p>
         </div>
         <div class="hero__buttons">
-          <a href="#" class="btn btn--primary btn--big">Join the Google Classroom</a>
-          <a href="#intro" class="btn btn--teal btn--big">See What's Included</a>
+          <a href="#intro" class="btn btn--primary btn--big">See What's Included</a>
         </div>
       </div>
       <div class="hero__image">
@@ -63,14 +97,14 @@
           <div class="detail-card">
             <div class="detail-card__header">
               <img src="assets/icon-calendar.svg" alt="" width="20" height="20" />
-              <span>Duration:</span>
+              <span>Duration</span>
             </div>
             <p class="detail-card__value">June → August</p>
           </div>
           <div class="detail-card">
             <div class="detail-card__header">
               <img src="assets/icon-calendar.svg" alt="" width="20" height="20" />
-              <span>Frequency:</span>
+              <span>Frequency</span>
             </div>
             <p class="detail-card__value">1 session per week</p>
           </div>
@@ -169,87 +203,35 @@
     </section>
 
     <!-- Syllabus -->
-    <section class="section section--gradient syllabus">
+    <section class="section section--gradient syllabus" id="syllabus">
       <h2 class="section__title syllabus__title" data-mobile-title="Syllabus">This Summer's Syllabus</h2>
-      <div class="syllabus__list">
+      <div class="syllabus__list" id="syllabus-list"><!-- rendered by js/main.js --></div>
+      <button class="btn btn--primary btn--big syllabus__cta" id="syllabus-show-all">Show all Syllabus</button>
+    </section>
 
-        <article class="lesson lesson--featured">
-          <p class="lesson__number">01</p>
-          <div class="lesson__info">
-            <h3 class="lesson__title">How Top Professionals Actually Build Their Careers</h3>
-            <div class="lesson__chips">
-              <span class="chip"><img src="assets/icon-calendar-gray.svg" alt="" width="20" height="20" />Wed (3/18)</span>
-              <span class="chip"><img src="assets/icon-clock-gray.svg" alt="" width="20" height="20" />5:30 PM GMT</span>
-            </div>
-            <p class="lesson__desc">What separates deliberate career-building from just staying busy — from people who've done both.</p>
-            <ul class="lesson__speakers">
-              <li>Darin Danforth - Job title</li>
-              <li>Lisa Savage - Job title</li>
-            </ul>
+    <!-- Reviews -->
+    <section class="section section--white reviews" id="reviews">
+      <div class="reviews__layout">
+        <div class="reviews__heading">
+          <h2 class="section__title">What our students say</h2>
+          <p class="section__subtitle">Real feedback from students who've already joined this summer's sessions.</p>
+          <p class="reviews__counter reviews__counter--desktop"><span id="reviews-counter-current">01</span><span class="reviews__counter-total">/<span id="reviews-counter-total">06</span></span></p>
+        </div>
+        <div class="reviews__card">
+          <div class="reviews__viewport">
+            <div class="reviews__track" id="reviews-track"><!-- rendered by js/main.js --></div>
           </div>
-          <div class="lesson__action">
-            <span class="lesson__badge lesson__badge--featured">Panel</span>
+          <div class="reviews__controls reviews__controls--desktop">
+            <button class="reviews__arrow reviews__arrow--prev" id="reviews-prev-d" aria-label="Previous review"></button>
+            <button class="reviews__arrow reviews__arrow--next" id="reviews-next-d" aria-label="Next review"></button>
           </div>
-        </article>
-
-        <article class="lesson">
-          <p class="lesson__number">02</p>
-          <div class="lesson__info">
-            <h3 class="lesson__title">Breaking Into Any Industry Without Experience</h3>
-            <div class="lesson__chips">
-              <span class="chip"><img src="assets/icon-calendar-gray.svg" alt="" width="20" height="20" />Wed (3/18)</span>
-              <span class="chip"><img src="assets/icon-clock-gray.svg" alt="" width="20" height="20" />5:30 PM GMT</span>
-            </div>
-          </div>
-          <div class="lesson__action">
-            <span class="lesson__badge">Panel</span>
-          </div>
-        </article>
-
-        <article class="lesson">
-          <p class="lesson__number">03</p>
-          <div class="lesson__info">
-            <h3 class="lesson__title">What Hiring Managers Really Look For (And What They Ignore)</h3>
-            <div class="lesson__chips">
-              <span class="chip"><img src="assets/icon-calendar-gray.svg" alt="" width="20" height="20" />Wed (3/18)</span>
-              <span class="chip"><img src="assets/icon-clock-gray.svg" alt="" width="20" height="20" />5:30 PM GMT</span>
-            </div>
-          </div>
-          <div class="lesson__action">
-            <span class="lesson__badge">Panel</span>
-          </div>
-        </article>
-
-        <article class="lesson">
-          <p class="lesson__number">04</p>
-          <div class="lesson__info">
-            <h3 class="lesson__title">Interview Mastery: Psychology of Winning Interviews</h3>
-            <div class="lesson__chips">
-              <span class="chip"><img src="assets/icon-calendar-gray.svg" alt="" width="20" height="20" />Wed (3/18)</span>
-              <span class="chip"><img src="assets/icon-clock-gray.svg" alt="" width="20" height="20" />5:30 PM GMT</span>
-            </div>
-          </div>
-          <div class="lesson__action">
-            <span class="lesson__badge">Panel</span>
-          </div>
-        </article>
-
-        <article class="lesson">
-          <p class="lesson__number">05</p>
-          <div class="lesson__info">
-            <h3 class="lesson__title">AI Without the Hype: What Actually Matters for Your Career</h3>
-            <div class="lesson__chips">
-              <span class="chip"><img src="assets/icon-calendar-gray.svg" alt="" width="20" height="20" />Wed (3/18)</span>
-              <span class="chip"><img src="assets/icon-clock-gray.svg" alt="" width="20" height="20" />5:30 PM GMT</span>
-            </div>
-          </div>
-          <div class="lesson__action">
-            <span class="lesson__badge">Panel</span>
-          </div>
-        </article>
-
+        </div>
+        <div class="reviews__controls reviews__controls--mobile">
+          <button class="reviews__arrow reviews__arrow--prev" id="reviews-prev-m" aria-label="Previous review"></button>
+          <p class="reviews__counter"><span data-counter-current>01</span><span class="reviews__counter-total">/<span data-counter-total>06</span></span></p>
+          <button class="reviews__arrow reviews__arrow--next" id="reviews-next-m" aria-label="Next review"></button>
+        </div>
       </div>
-      <a href="#" class="btn btn--primary btn--big syllabus__cta">Show all Syllabus</a>
     </section>
 
     <!-- CTA -->
@@ -259,11 +241,10 @@
         <h2 class="section__title">Save Your Summer Seat</h2>
         <p class="section__subtitle">Join now and stay tuned — speaker lineups and session details are coming very soon.</p>
       </div>
-      <a href="#" class="btn btn--primary btn--big cta__btn">Join the Google Classroom</a>
     </section>
 
     <!-- FAQ -->
-    <section class="section section--white faq">
+    <section class="section section--white faq" id="faq">
       <h2 class="section__title">FAQ</h2>
       <div class="faq__list">
         <div class="faq-item faq-item--open">
@@ -272,7 +253,9 @@
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
           <div class="faq-item__answer">
-            <p>No. Access is automatic for every currently enrolled ELVTR student.</p>
+            <div class="faq-item__answer-inner">
+              <p>No. Access is automatic for every currently enrolled ELVTR student.</p>
+            </div>
           </div>
         </div>
         <div class="faq-item">
@@ -281,7 +264,9 @@
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
           <div class="faq-item__answer">
-            <p>No. Any active enrollment in any ELVTR course gives you full access to the Summer Series.</p>
+            <div class="faq-item__answer-inner">
+              <p>No. The Summer Series is open to all enrolled students, regardless of which course you're taking.</p>
+            </div>
           </div>
         </div>
         <div class="faq-item">
@@ -290,7 +275,9 @@
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
           <div class="faq-item__answer">
-            <p>No. The Summer Series is already included in your ELVTR enrollment — no extra cost.</p>
+            <div class="faq-item__answer-inner">
+              <p>No. It's included in your enrollment at no extra charge.</p>
+            </div>
           </div>
         </div>
         <div class="faq-item">
@@ -299,7 +286,20 @@
             <span class="faq-item__icon" aria-hidden="true"></span>
           </button>
           <div class="faq-item__answer">
-            <p>The full schedule lives in the Google Classroom, and you'll get a reminder before every session.</p>
+            <div class="faq-item__answer-inner">
+              <p>Check your student portal or your email — the schedule updates weekly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-item__toggle" aria-expanded="false">
+            <span class="faq-item__question">What if I miss a session?</span>
+            <span class="faq-item__icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-item__answer">
+            <div class="faq-item__answer-inner">
+              <p>No problem — every session is recorded and available to rewatch in your student portal afterward.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -346,7 +346,7 @@
       <div class="footer__bottom">
         <div class="footer__copyright">
           <img src="assets/logo-footer.svg" alt="ELVTR" width="42" height="36" />
-          <p>© 2019-2023 AARON CROWN INC. <br />ALL RIGHTS RESERVED.</p>
+          <p>© 2019-2026 ELVTR US LLC. <br />ALL RIGHTS RESERVED</p>
         </div>
         <div class="footer__policies">
           <a href="#">Accessibility</a>

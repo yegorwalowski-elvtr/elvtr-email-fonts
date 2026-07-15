@@ -5,6 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ELVTR Talks: Summer Series</title>
   <meta name="description" content="12 weeks of live sessions with industry experts — already included in your ELVTR enrollment. No extra cost, no extra sign-up." />
+  <!-- NOTE: og:image must become an absolute URL once the final domain is known -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ELVTR Talks: Summer Series" />
+  <meta property="og:description" content="12 weeks of live sessions with industry experts — already included in your ELVTR enrollment." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ELVTR Talks: Summer Series" />
+  <meta name="twitter:description" content="12 weeks of live sessions with industry experts — already included in your ELVTR enrollment." />
+  <meta name="twitter:image" content="assets/og-image.jpg" />
   <link rel="preload" href="assets/fonts/NeueMontreal-Medium.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/ABCArizona-FlareMedium.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/styles.css" />
@@ -256,7 +267,7 @@
           </button>
           <div class="faq-item__answer">
             <div class="faq-item__answer-inner">
-              <p>No. Access is automatic for every currently enrolled ELVTR student.</p>
+              <p>Students receive a link from their Learning Advisor to join a Google Classroom. This is where they'll find links to live classes and recordings of previous sessions.</p>
             </div>
           </div>
         </div>
@@ -289,7 +300,7 @@
           </button>
           <div class="faq-item__answer">
             <div class="faq-item__answer-inner">
-              <p>Check your student portal or your email — the schedule updates weekly.</p>
+              <p>Students should check the Google Classroom or the Google Classroom calendar for the most up-to-date schedule. The schedule is not sent by email.</p>
             </div>
           </div>
         </div>
@@ -339,8 +350,11 @@
             <a href="https://www.facebook.com/elvtrcourses/" class="social social--facebook" aria-label="Facebook"><img src="assets/social-facebook.svg" alt="" width="20" height="20" /></a>
           </div>
           <div class="footer__contact-details">
-            <a class="footer__phone" href="tel:+18888966950">+1 888 896 6950</a>
-            <p class="footer__address">300 SPECTRUM CENTER DR, IRVINE, CA 92618</p>
+            <button class="footer__email" id="footer-email" type="button" title="Copy email to clipboard">
+              <span class="footer__email-text">student.support@elvtr.com</span>
+              <span class="footer__email-copied" aria-live="polite">Copied!</span>
+            </button>
+            <p class="footer__address">2810 N CHURCH STREET SUITE 86079, WILMINGTON, DE 19802</p>
           </div>
         </div>
       </div>

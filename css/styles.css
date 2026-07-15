@@ -1451,13 +1451,42 @@ button {
   gap: 4px;
 }
 
-.footer__phone {
+.footer__email {
+  position: relative;
   font-family: var(--font-heading);
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
   letter-spacing: -0.04em;
   color: var(--color-ink);
+  transition: color var(--anim);
+}
+
+.footer__email:hover {
+  color: var(--color-green);
+}
+
+.footer__email-copied {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%) translateY(4px);
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--color-green);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--anim), transform var(--anim);
+}
+
+.footer__email--copied .footer__email-copied {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .footer__address {

@@ -84,7 +84,7 @@ function lessonHTML(item, index) {
         '</div>' +
         '<div class="lesson__details">' +
           '<div class="lesson__details-inner">' +
-            '<p class="lesson__speakers-label">Speakers:</p>' +
+            '<p class="lesson__speakers-label">' + (item.speakers.length > 1 ? 'Speakers:' : 'Speaker:') + '</p>' +
             '<ul class="lesson__speakers">' + item.speakers.map(speakerHTML).join('') + '</ul>' +
           '</div>' +
         '</div>' +
@@ -211,6 +211,33 @@ var header = document.querySelector('.header');
 window.addEventListener('scroll', function () {
   header.classList.toggle('header--scrolled', window.scrollY > 8);
 }, { passive: true });
+
+/* ============ Copy support email ============ */
+
+var emailBtn = document.getElementById('footer-email');
+var emailTimer = null;
+
+emailBtn.addEventListener('click', function () {
+  var email = emailBtn.querySelector('.footer__email-text').textContent;
+  var copied = function () {
+    emailBtn.classList.add('footer__email--copied');
+    clearTimeout(emailTimer);
+    emailTimer = setTimeout(function () {
+      emailBtn.classList.remove('footer__email--copied');
+    }, 1600);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(email).then(copied);
+  } else {
+    var area = document.createElement('textarea');
+    area.value = email;
+    document.body.appendChild(area);
+    area.select();
+    document.execCommand('copy');
+    document.body.removeChild(area);
+    copied();
+  }
+});
 
 /* ============ Scroll to top ============ */
 

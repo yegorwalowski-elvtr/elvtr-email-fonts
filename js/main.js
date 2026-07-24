@@ -3,45 +3,45 @@
 var SYLLABUS = [
   { title: 'How Top Professionals Actually Build Their Careers', date: 'Wed (6/10)', time: '6 PM PT', format: 'Panel',
     speakers: [
-      { name: 'Darin Danforth', url: 'https://www.linkedin.com/in/ddan4th/' },
-      { name: 'Lisa Savage', url: 'https://www.linkedin.com/in/lisa-savage-8010325/' },
-      { name: 'Duc Haba', url: 'https://www.linkedin.com/in/duchaba/' }
+      { name: 'Darin Danforth', title: 'Principal Field Chief Technical Officer & Instructor', url: 'https://www.linkedin.com/in/ddan4th/' },
+      { name: 'Lisa Savage', title: 'Global Group Creative Director & Elite Expert', url: 'https://www.linkedin.com/in/lisa-savage-8010325/' },
+      { name: 'Duc Haba', title: 'Chief AI Officer & Instructor', url: 'https://www.linkedin.com/in/duchaba/' }
     ] },
   { title: 'How to Turn Skills Into Opportunities', date: 'Wed (6/17)', time: '6 PM PT', format: 'Panel',
     speakers: [
-      { name: 'Clayton Davis', url: 'https://www.linkedin.com/in/clayton-davis-0b664a7/' },
-      { name: 'David N. Weiss', url: 'https://www.linkedin.com/in/david-n-weiss-72731838/' },
-      { name: 'Matt Balogh', url: 'https://www.linkedin.com/in/gmbaloghgames' }
+      { name: 'Clayton Davis', title: 'Senior Creative Designer & Expert Instructor', url: 'https://www.linkedin.com/in/clayton-davis-0b664a7/' },
+      { name: 'David N. Weiss', title: 'Emmy-nominated Writer, Film Director & Award-winning Animation Scriptwriter', url: 'https://www.linkedin.com/in/david-n-weiss-72731838/' },
+      { name: 'Matt Balogh', title: 'Professional TTRPG Storyteller & Expert Instructor', url: 'https://www.linkedin.com/in/gmbaloghgames' }
     ] },
   { title: 'What Hiring Managers Really Look For (And What They Ignore)', date: 'Wed (6/24)', time: '6 PM PT', format: 'Panel',
     speakers: [
-      { name: 'Danielle Tomassini', url: 'https://www.linkedin.com/in/dtomassini/' },
-      { name: 'David Auerbach', url: 'https://www.linkedin.com/in/davidjauerbach4/' },
-      { name: 'Leah Latham', url: 'https://www.linkedin.com/in/leahlatham/' }
+      { name: 'Danielle Tomassini', title: 'Marketing, Product, & Sales Executive | Managing Partner, Growth and Commercial Lead at Otter Collective', url: 'https://www.linkedin.com/in/dtomassini/' },
+      { name: 'David Auerbach', title: 'Head of the Transformation Management Office (TMO), COO at AstraZeneca', url: 'https://www.linkedin.com/in/davidjauerbach4/' },
+      { name: 'Leah Latham', title: 'Senior Production Supervisor at Walt Disney Animation Studios', url: 'https://www.linkedin.com/in/leahlatham/' }
     ] },
   { title: 'How to Stand Out in a Competitive Field', date: 'Wed (7/1)', time: '6 PM PT', format: 'Panel',
     speakers: [
-      { name: 'Ivy Sang', url: 'https://ca.linkedin.com/in/ivysang' },
-      { name: 'Adam Beechen', url: 'https://www.linkedin.com/in/adam-beechen-b6320411/' },
-      { name: 'Vanessa Robles', url: 'https://www.linkedin.com/in/vanessa-robles-a505b39/' }
+      { name: 'Ivy Sang', title: 'UX/UI Director | Lead, Product Design at Safe Software', url: 'https://ca.linkedin.com/in/ivysang' },
+      { name: 'Adam Beechen', title: 'Emmy-nominated writer, producer for Television, Film and Comics & New York Times best-selling author', url: 'https://www.linkedin.com/in/adam-beechen-b6320411/' },
+      { name: 'Vanessa Robles', title: 'Production Director at Penguin Random House', url: 'https://www.linkedin.com/in/vanessa-robles-a505b39/' }
     ] },
   { title: 'Building a Personal Brand That Attracts Opportunities', date: 'Wed (7/8)', time: '5 PM PT', format: 'Solo',
     speakers: [
-      { name: 'Lilah Jones', url: 'https://www.linkedin.com/in/lilahjones' }
+      { name: 'Lilah Jones', title: 'Keynote Speaker, Leadership Strategist & Executive Coach', url: 'https://www.linkedin.com/in/lilahjones' }
     ] },
   { title: 'Interview Mastery: Psychology of Winning Interviews', date: 'Tue (7/14)', time: '6 PM PT', format: 'Solo',
     speakers: [
-      { name: 'Lindsay Shaw', url: 'https://www.linkedin.com/in/lindsay-shaw-4886b76/' }
+      { name: 'Lindsay Shaw', title: 'Pro & Former Olympic Sport Psychologist and Psychophysiologist | Director of Sport Psychology for the Cleveland Guardians', url: 'https://www.linkedin.com/in/lindsay-shaw-4886b76/' }
     ] },
   { title: 'AI Without the Hype: What Actually Matters for Your Career', date: 'Wed (7/22)', time: '6 PM PT', format: 'Panel',
     speakers: [
-      { name: 'Jeremy Rule', url: 'https://www.linkedin.com/in/jeremyrule/' },
-      { name: 'Tanner Gilligan', url: 'https://www.linkedin.com/in/tanner-gilligan/' },
-      { name: 'Avril Hsu', url: 'https://www.linkedin.com/in/avrilwhsu' }
+      { name: 'Jeremy Rule', title: 'Chief AI Officer at TruDate Corporation', url: 'https://www.linkedin.com/in/jeremyrule/' },
+      { name: 'Tanner Gilligan', title: 'Principal AI Engineer at Microsoft', url: 'https://www.linkedin.com/in/tanner-gilligan/' },
+      { name: 'Avril Hsu', title: 'DMTS, Human-Centered AI Product Incubator & Builder at Dell Chief AI Office', url: 'https://www.linkedin.com/in/avrilwhsu' }
     ] },
   { title: 'Public Speaking for Real Life (Not Just the Stage)', date: 'Wed (7/29)', time: '6 PM PT', format: 'Solo',
     speakers: [
-      { name: 'Monique Hayward', url: 'https://www.linkedin.com/in/moniquehayward' }
+      { name: 'Monique Hayward', title: 'Executive Marketing & Communications Leader, Author, Fractional CMO & Former Senior Director at Microsoft & Intel', url: 'https://www.linkedin.com/in/moniquehayward' }
     ] }
 ];
 
@@ -65,6 +65,7 @@ function speakerHTML(speaker) {
         '<span class="lesson__speaker-name">' + speaker.name + '</span>' +
         '<img src="assets/icon-linkedin.svg" alt="LinkedIn" width="16" height="16" />' +
       '</a>' +
+      '<span class="lesson__speaker-title"> - ' + speaker.title + '</span>' +
     '</li>'
   );
 }

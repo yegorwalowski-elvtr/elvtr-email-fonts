@@ -951,6 +951,16 @@ button {
   text-decoration: underline;
 }
 
+.lesson__speaker img {
+  flex-shrink: 0;
+}
+
+.lesson__speaker-title {
+  font-size: 20px;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
 .lesson__action {
   display: flex;
   flex-direction: column;
@@ -1796,7 +1806,8 @@ button {
   }
 
   .lesson__speakers-label,
-  .lesson__speaker {
+  .lesson__speaker,
+  .lesson__speaker-title {
     font-size: 18px;
   }
 
